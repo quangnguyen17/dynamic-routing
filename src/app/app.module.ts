@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HelloComponent } from './components/hello/hello.component';
 import { WorldComponent } from './components/world/world.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HelloComponent, WorldComponent],
+  declarations: [AppComponent, HomeComponent, HelloComponent, WorldComponent, ProfileComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

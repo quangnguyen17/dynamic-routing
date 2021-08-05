@@ -4,11 +4,9 @@
     <p class="subtitle">Dynamic Routing Demo App</p>
   </div>
   <div class="links">
-    <a [routerLink]="'/' + routes.home">{{
-      (routes.home || "Home").toUpperCase()
-    }}</a>
-    <a [routerLink]="'/' + routes.hello">{{ routes.hello.toUpperCase() }}</a>
-    <a [routerLink]="'/' + routes.world">{{ routes.world.toUpperCase() }}</a>
+    <a [routerLink]="'/' + routes.home">{{ routes.home || "Home" }}</a>
+    <a [routerLink]="'/' + routes.hello">{{ routes.hello }}</a>
+    <a [routerLink]="'/' + routes.world">{{ routes.world }}</a>
   </div>
 </div>
 <hr />
