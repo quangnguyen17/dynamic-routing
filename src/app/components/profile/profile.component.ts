@@ -7,13 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  userId: string = '';
+  params: any = {};
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.userId = params['userId'];
-    });
+    this.route.params.subscribe((params) => (this.params = params));
   }
 }

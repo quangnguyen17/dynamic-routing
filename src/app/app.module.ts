@@ -9,7 +9,13 @@ import { WorldComponent } from './components/world/world.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HelloComponent, WorldComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HelloComponent,
+    WorldComponent,
+    ProfileComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
