@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+  static PATH = 'profile/:userId';
+
   params: any = {};
 
   constructor(private route: ActivatedRoute) {}

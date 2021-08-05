@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import routes from '../../routes';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,8 @@ import routes from '../../routes';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  static PATH = '';
+
   users: string[] = ['Alex Otten', 'Quang Nguyen', 'Damon Douglas'];
 
   constructor(private router: Router) {}
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit {
     const userId: string = user.toLowerCase().replace(/ /g, '-');
 
     // get route path
-    const profileRoutePath = routes.profile.replace(`:userId`, userId);
+    const profileRoutePath = ProfileComponent.PATH.replace(`:userId`, userId);
 
     // navigate to profile
     this.router.navigate([`/${profileRoutePath}`]);
