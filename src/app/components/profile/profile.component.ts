@@ -9,11 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 export class ProfileComponent implements OnInit {
   static PATH = 'profile/:userId';
 
-  params: any = {};
+  userId: string = '';
 
-  constructor(private route: ActivatedRoute) {}
+  // constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.route.params.subscribe((params) => (this.params = params));
+  ngOnInit() {
+    // this.route.params.subscribe((params) => {
+    //   this.userId = params.userId;
+    // });
   }
 }

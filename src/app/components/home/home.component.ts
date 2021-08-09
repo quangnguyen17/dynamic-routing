@@ -10,20 +10,19 @@ import { ProfileComponent } from '../profile/profile.component';
 export class HomeComponent implements OnInit {
   static PATH = '';
 
-  users: string[] = ['Alex Otten', 'Quang Nguyen', 'Damon Douglas'];
+  users = ['Alex Otten', 'Quang Nguyen', 'Damon Douglas'];
 
-  constructor(private router: Router) {}
+  // constructor(private router: Router) {}
+  constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
-  goToProfile(user: string): void {
-    // generate user id
-    const userId: string = user.toLowerCase().replace(/ /g, '-');
-
-    // get route path
-    const profileRoutePath = ProfileComponent.PATH.replace(`:userId`, userId);
-
-    // navigate to profile
-    this.router.navigate([`/${profileRoutePath}`]);
+  goToProfile(user: string) {
+    // // generate user id
+    // const userId: string = user.toLowerCase().replace(/ /g, '-');
+    // // get route path, concat :userId with the actual user ID
+    // const path = '/' + ProfileComponent.PATH.replace(`:userId`, userId);
+    // // navigate to profile
+    // this.router.navigate([path]);
   }
 }

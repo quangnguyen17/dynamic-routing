@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// components
 import { HomeComponent } from './components/home/home.component';
 import { HelloComponent } from './components/hello/hello.component';
 import { WorldComponent } from './components/world/world.component';
@@ -12,8 +11,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 })
 export class AppComponent {
   title = 'dynamic-routing';
-
-  PATH: { [key: string]: string } = {
+  PATH = {
     home: HomeComponent.PATH,
     hello: HelloComponent.PATH,
     world: WorldComponent.PATH,
